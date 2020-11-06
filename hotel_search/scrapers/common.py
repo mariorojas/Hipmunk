@@ -23,7 +23,7 @@ class Scraper(object):
         dir_path = os.path.dirname(os.path.realpath(__file__))
         with open(dir_path + '/data.json') as data_file:
             dataset = json.load(data_file)
-            data_keys = dataset.keys()
+            data_keys = list(dataset.keys())
 
         for i in range_iter:
             data = dataset[data_keys[i]]
